@@ -51,9 +51,10 @@ rm -f frames/desktop/*.webp frames/mobile/*.webp
 # Computador: corta 70 px do topo (ar-condicionado do teto), 16 quadros/s
 $FF -i "$VID_SRC/video 1.mp4" -vf "crop=1280:650:0:70,fps=16" \
     -c:v libwebp -quality 72 frames/desktop/q_%03d.webp
-# Celular: recorte vertical sobre o balcão, 12 quadros/s
-$FF -i "$VID_SRC/video 1.mp4" -vf "crop=640:650:470:70,fps=12" \
-    -c:v libwebp -quality 70 frames/mobile/q_%03d.webp
+# Celular: recorte sobre o balcão, 12 quadros/s
+# (enquadramento mais aberto, 6:5, para a metade de cima da tela do celular)
+$FF -i "$VID_SRC/video 1.mp4" -vf "crop=792:640:420:80,scale=660:-2,fps=12" \
+    -c:v libwebp -quality 66 frames/mobile/q_%03d.webp
 
 echo "desktop: $(ls frames/desktop | wc -l) quadros, $(du -sh frames/desktop | cut -f1)"
 echo "mobile:  $(ls frames/mobile | wc -l) quadros, $(du -sh frames/mobile | cut -f1)"

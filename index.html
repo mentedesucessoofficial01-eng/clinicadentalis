@@ -13,8 +13,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230E7C86'/%3E%3Cpath d='M12.6 8.6c-2.7 0-4.3 2-4.3 4.7 0 2.2.8 3.7 1.4 5.7.7 2.4.9 6.4 2.6 6.4 1.5 0 1.7-4.3 3.7-4.3s2.2 4.3 3.7 4.3c1.7 0 1.9-4 2.6-6.4.6-2 1.4-3.5 1.4-5.7 0-2.7-1.6-4.7-4.3-4.7-1.6 0-2.2.9-3.4.9s-1.8-.9-3.4-.9z' fill='none' stroke='white' stroke-width='1.7' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="img/imagem-1-900.webp" as="image" media="(max-width: 899px)">
-  <link rel="preload" href="img/imagem-1-1600.webp" as="image" media="(min-width: 900px)">
+  <link rel="preload" as="image" imagesrcset="img/imagem-1-900.webp 900w, img/imagem-1-1600.webp 1600w" imagesizes="(min-width: 900px) 36vw, calc(100vw - 40px)" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
   <script>
     document.documentElement.classList.add('js');
@@ -88,7 +87,7 @@
         <span class="linha"><span class="palavra">Sorria</span></span>
         <span class="linha"><em class="palavra">sem pressa.</em></span>
       </h1>
-      <p class="hero__apoio">Odontologia que começa pela escuta: avaliação completa, plano explicado por escrito e nenhum procedimento sem a sua aprovação.</p>
+      <p class="hero__apoio"><span class="hero__apoio-extra">Odontologia que começa pela escuta: a</span><span class="hero__apoio-cel">A</span>valiação completa, plano explicado por escrito e nenhum procedimento sem a sua aprovação.</p>
       <div class="hero__acoes">
         <button class="btn btn--coral" type="button" data-demo="agendamento">Agendar avaliação</button>
         <a class="link-seta" href="#experiencia" data-rolar>Conhecer a clínica
@@ -97,7 +96,7 @@
     </div>
     <figure class="hero__portal">
       <img src="img/imagem-1-1600.webp" srcset="img/imagem-1-900.webp 900w, img/imagem-1-1600.webp 1600w"
-           sizes="(min-width: 900px) 44vw, 100vw" width="1600" height="900"
+           sizes="(min-width: 900px) 36vw, calc(100vw - 40px)" width="1600" height="900"
            alt="Recepção da Dentalis: balcão de mármore branco com base azul-petróleo, orquídeas e poltronas claras junto a janelas amplas."
            fetchpriority="high">
     </figure>
@@ -111,7 +110,7 @@
     <div class="filme__fixo">
       <div class="filme__palco">
         <canvas id="filme-canvas" aria-hidden="true"></canvas>
-        <img class="filme__estatico" src="frames/desktop/q_127.webp" alt="Recepção da Dentalis vista da entrada." loading="lazy">
+        <img class="filme__estatico" data-src="frames/desktop/q_127.webp" alt="Recepção da Dentalis vista da entrada." loading="lazy">
       </div>
       <div class="filme__sombra filme__sombra--esq" aria-hidden="true"></div>
       <div class="filme__sombra filme__sombra--dir" aria-hidden="true"></div>
@@ -199,7 +198,7 @@
   <section class="atendimento" id="atendimento" aria-labelledby="atend-titulo">
     <figure class="atendimento__video">
       <video id="video-atendimento" muted playsinline preload="none"
-             poster="video/video-2-inicio.webp" data-fim="video/video-2-fim.webp"
+             data-poster="video/video-2-inicio.webp" data-fim="video/video-2-fim.webp"
              aria-label="Dentista e paciente conversando e sorrindo no consultório.">
         <source src="video/video-2.mp4" type="video/mp4">
       </video>
@@ -269,7 +268,7 @@
   <section class="final" id="agendar" aria-labelledby="final-titulo">
     <div class="final__midia">
       <video class="final__video" id="video-final" muted playsinline preload="none"
-             poster="video/video-3-inicio.webp" data-fim="video/video-3-fim.webp" aria-hidden="true">
+             data-poster="video/video-3-inicio.webp" data-fim="video/video-3-fim.webp" aria-hidden="true">
         <source src="video/video-3.mp4" type="video/mp4">
       </video>
       <img class="final__foto" src="img/imagem-2-600.webp" srcset="img/imagem-2-600.webp 600w, img/imagem-2-900.webp 900w"
@@ -343,10 +342,10 @@
   </div>
 </dialog>
 
-<script src="js/config.js"></script>
-<script src="js/vendor/lenis.min.js"></script>
-<script src="js/vendor/gsap.min.js"></script>
-<script src="js/vendor/ScrollTrigger.min.js"></script>
-<script src="js/app.js"></script>
+<script src="js/config.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/app.js" defer></script>
 </body>
 </html>

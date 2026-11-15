@@ -48,6 +48,7 @@ body {
 }
 main, footer, section { overflow-x: clip; }
 img, video, canvas, svg { display: block; max-width: 100%; }
+img { height: auto; }
 figure { margin: 0; }
 h1, h2, h3, p, ul, ol { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
@@ -180,6 +181,8 @@ html:not(.js) #loader { display: none; }
 .hero__titulo .linha { display: block; overflow: hidden; padding-bottom: .06em; }
 .hero__titulo .palavra { display: inline-block; }
 .hero__apoio { margin-top: 18px; color: var(--texto-suave); font-size: 1.08rem; max-width: 30em; }
+.hero__apoio-cel { display: none; }
+@media (max-width: 899px) { .hero__apoio-cel { display: inline; } }
 .hero__acoes { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
 .hero__acoes .btn { flex: 1 1 100%; }
 .hero__portal {
@@ -489,6 +492,51 @@ html:not(.js) #loader { display: none; }
 
 @media (min-width: 1600px) {
   .hero__portal { --w: 34vw; }
+}
+
+/* =========================================================================
+   Ajustes finos do celular (até 899px). O computador não é afetado.
+   Regra: foto e texto nunca disputam o mesmo espaço; cada um no seu bloco.
+   ========================================================================= */
+@media (max-width: 899px) {
+  #loader { display: none; }
+
+  /* Abertura: foto no arco em cima, texto e botão logo abaixo, tudo na 1ª tela */
+  .hero { padding: 14px var(--margem) 36px; gap: 0; }
+  .hero__portal {
+    order: -1; height: clamp(130px, 25svh, 300px); margin-bottom: 16px;
+    border-radius: 50% 50% var(--raio) var(--raio) / 42% 42% var(--raio) var(--raio);
+  }
+  .hero__portal img { object-position: 78% 55%; }
+  .hero .rotulo { font-size: .7rem; }
+  .hero__titulo { font-size: clamp(2.9rem, 13.5vw, 4.4rem); margin-top: 10px; }
+  .hero__apoio { margin-top: 12px; font-size: 1rem; line-height: 1.5; }
+  .hero__acoes { margin-top: 18px; }
+  .hero__lista, .hero__apoio-extra { display: none; }
+
+  /* Passeio: foto na metade de cima, texto no branco embaixo (nada sobre a foto) */
+  .filme-ativo .filme { height: 300svh; }
+  .filme-ativo .filme__palco { inset: auto; top: var(--topo-h); left: 0; right: 0; height: 46svh; }
+  .filme-ativo .filme__sombra, .filme-ativo .letreiro { display: none !important; }
+  .filme-ativo .cena { top: calc(var(--topo-h) + 46svh + 22px); bottom: auto; }
+  .filme-ativo .cena__titulo { font-size: clamp(1.75rem, 7.4vw, 2.3rem); }
+  .filme-ativo .cena__texto { font-size: .98rem; line-height: 1.5; margin-top: .55em; }
+  .filme-ativo .cena--numeros { top: calc(var(--topo-h) + 12px); bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .filme-ativo .cena--numeros .cena__titulo { font-size: clamp(1.75rem, 4svh, 2.3rem); }
+  .filme-ativo .cena--numeros .numero__valor { font-size: clamp(2.2rem, 5.4svh, 3.2rem); }
+  .filme-ativo .cena--numeros .numero__legenda { font-size: .9rem; }
+  .filme__palco { height: 46svh; }
+
+  /* Fotos das seções na medida da tela */
+  .beneficios__foto img { aspect-ratio: 4 / 3; object-position: 50% 22%; }
+  .beneficios__texto { padding: 36px var(--margem) 56px; }
+  .atendimento__texto { padding-top: 36px; }
+  .estrutura__foto img { aspect-ratio: 3 / 2; }
+  .estrutura__texto { padding: 40px var(--margem) 56px; }
+  .final__midia { border-radius: 50% 50% var(--raio) var(--raio) / 34% 34% var(--raio) var(--raio); }
+  .final__foto { aspect-ratio: 1 / 1.02; object-position: 50% 16%; }
+  .final { gap: 26px; padding-bottom: 64px; }
+  .titulo--grande { font-size: clamp(2.4rem, 10vw, 3.4rem); }
 }
 
 /* Movimento reduzido: nada de transições longas */

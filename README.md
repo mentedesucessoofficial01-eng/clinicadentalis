@@ -36,10 +36,15 @@ bash tools/preparar_midia.sh
 ## Regras seguidas
 - Cores 60-30-10: branco · azul-petróleo #0E7C86 · coral #FF7A59 só em botões. Texto escuro sobre o coral, por contraste.
 - Nada de dado clínico, preço, CRO, endereço ou depoimento inventado. O rodapé reserva a linha do responsável técnico.
-- Celular primeiro: barra fixa "Agendar avaliação", menu em tela cheia, quadros recortados sobre o balcão.
+- Celular primeiro (tudo em `@media (max-width: 899px)`, sem mexer no computador):
+  - abertura com a foto no arco em cima e título + botão na primeira tela (testado em 360×572);
+  - no passeio, foto na metade de cima e texto no branco embaixo, nunca sobre a foto;
+  - fotos das seções em proporções do celular (4:3, 3:2, arco quase quadrado);
+  - sem tela de entrada; quadros da sequência só baixam depois da primeira tela;
+  - capas dos vídeos só baixam quando o vídeo se aproxima; barra fixa "Agendar avaliação".
 - Com "reduzir movimento" ligado no aparelho: sem rolagem suave, sem vídeo tocando, sequência vira foto com os textos.
 - Sem cookies, sem formulários e sem serviços de terceiros ao abrir a página (ver `privacidade.html`).
 
 ## Testado
-Chrome sem janela, controlado por script: celular 390×844 com toque, computador 1440×900 e celular com movimento reduzido.
+Chrome sem janela, controlado por script: celulares 360×572, 390×740 e 412×800 com toque, computador 1440×900 e celular com movimento reduzido.
 Sem erros no console, sem rolagem lateral; janela, menu, links internos e vídeo verificados.

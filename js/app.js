@@ -160,7 +160,12 @@
   function iniciaFilme() {
     const secao = $(".filme");
     const canvas = $("#filme-canvas");
-    if (!secao || !canvas || reduz || !temGSAP) return { primeiro: Promise.resolve() };
+    if (!secao || !canvas || reduz || !temGSAP) {
+      // Sem animação: mostra a foto parada da recepção no lugar da sequência
+      const foto = $(".filme__estatico");
+      if (foto && foto.dataset.src) { foto.loading = "lazy"; foto.src = foto.dataset.src; }
+      return { primeiro: Promise.resolve() };
+    }
 
     const celular = ehCelular();
     const pasta = celular ? "frames/mobile/" : "frames/desktop/";
@@ -205,13 +210,21 @@
     }
     function agenda() { if (!pedido) { pedido = true; requestAnimationFrame(desenha); } }
 
-    // Primeiro quadro já, o resto em segundo plano (4 por vez, na ordem do filme)
+    // Primeiro quadro já. O resto só depois que a 1ª tela terminou de carregar
+    // (ou quando a pessoa começar a rolar), para não disputar a internet com ela.
     const primeiro = carrega(0);
-    primeiro.then(async () => {
+    let comecou = false;
+    const carregaResto = async () => {
+      if (comecou) return;
+      comecou = true;
+      await primeiro;
       let proximo = 1;
       const trabalhador = async () => { while (proximo < TOTAL) await carrega(proximo++); };
       await Promise.all([trabalhador(), trabalhador(), trabalhador(), trabalhador()]);
-    });
+    };
+    if (document.readyState === "complete") setTimeout(carregaResto, 300);
+    else window.addEventListener("load", () => setTimeout(carregaResto, 300), { once: true });
+    window.addEventListener("scroll", carregaResto, { once: true, passive: true });
 
     // Abertura em círculo: a "porta" se abre enquanto a seção sobe
     const palco = $(".filme__palco", secao);
@@ -330,7 +343,12 @@
   function tocaUmaVez(video) {
     if (!video) return;
     if (reduz) { video.poster = video.dataset.fim; return; }
-    if (!("IntersectionObserver" in window)) return;
+    if (!("IntersectionObserver" in window)) { video.poster = video.dataset.poster; return; }
+    // A capa só é baixada quando o vídeo está chegando perto da tela
+    const ioCapa = new IntersectionObserver((es) => {
+      if (es.some((e) => e.isIntersecting)) { ioCapa.disconnect(); if (!video.poster) video.poster = video.dataset.poster; }
+    }, { rootMargin: "900px 0px" });
+    ioCapa.observe(video);
     const io = new IntersectionObserver((es) => {
       es.forEach((e) => {
         if (!e.isIntersecting) return;
@@ -390,10 +408,14 @@
     : new Promise((r) => { fotoHero.addEventListener("load", r, { once: true }); fotoHero.addEventListener("error", r, { once: true }); });
   const fontes = document.fonts ? document.fonts.ready : Promise.resolve();
 
-  Promise.race([
-    Promise.all([fotoPronta.then(avanca), fontes.then(avanca), filme.primeiro.then(avanca)]),
-    espera(1400),
-  ]).then(() => {
+  // No celular não há tela de entrada: a página aparece na hora.
+  const pronto = ehCelular()
+    ? Promise.resolve()
+    : Promise.race([
+        Promise.all([fotoPronta.then(avanca), fontes.then(avanca), filme.primeiro.then(avanca)]),
+        espera(1400),
+      ]);
+  pronto.then(() => {
     barraLoader.style.width = "100%";
     pctLoader.textContent = "100%";
     loader.classList.add("saiu");
