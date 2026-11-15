@@ -1,0 +1,7 @@
+# Originais brutos (com áudio e em tamanho cheio): ficam só no computador
+midia-original/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

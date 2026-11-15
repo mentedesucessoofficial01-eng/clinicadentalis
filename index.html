@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dentalis · Odontologia sem pressa (modelo demonstrativo)</title>
+  <meta name="description" content="Dentalis é uma clínica odontológica fictícia: um modelo demonstrativo de site criado pelo Estúdio Forja. Avaliação completa, plano por escrito e atendimento sem pressa.">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dentalis · Odontologia sem pressa">
+  <meta property="og:description" content="Modelo demonstrativo de site para clínica odontológica, criado pelo Estúdio Forja.">
+  <meta property="og:image" content="img/compartilhar.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230E7C86'/%3E%3Cpath d='M12.6 8.6c-2.7 0-4.3 2-4.3 4.7 0 2.2.8 3.7 1.4 5.7.7 2.4.9 6.4 2.6 6.4 1.5 0 1.7-4.3 3.7-4.3s2.2 4.3 3.7 4.3c1.7 0 1.9-4 2.6-6.4.6-2 1.4-3.5 1.4-5.7 0-2.7-1.6-4.7-4.3-4.7-1.6 0-2.2.9-3.4.9s-1.8-.9-3.4-.9z' fill='none' stroke='white' stroke-width='1.7' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/imagem-1-900.webp" as="image" media="(max-width: 899px)">
+  <link rel="preload" href="img/imagem-1-1600.webp" as="image" media="(min-width: 900px)">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('reduz');
+  </script>
+</head>
+<body>
+
+<!-- Tela de entrada -->
+<div id="loader" aria-hidden="true">
+  <div class="loader__marca">
+    <svg class="marca" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M12.6 8.6c-2.7 0-4.3 2-4.3 4.7 0 2.2.8 3.7 1.4 5.7.7 2.4.9 6.4 2.6 6.4 1.5 0 1.7-4.3 3.7-4.3s2.2 4.3 3.7 4.3c1.7 0 1.9-4 2.6-6.4.6-2 1.4-3.5 1.4-5.7 0-2.7-1.6-4.7-4.3-4.7-1.6 0-2.2.9-3.4.9s-1.8-.9-3.4-.9z"/></svg>
+    <span>Dentalis</span>
+  </div>
+  <div class="loader__trilho"><div id="loader-bar"></div></div>
+  <span id="loader-percent">0%</span>
+</div>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- Faixa do Estúdio Forja (portfólio) -->
+<div class="forja" role="region" aria-label="Navegação do Estúdio Forja">
+  <a class="forja__link" data-forja="site" href="https://estudioforja.com.br">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+    <span>Estúdio Forja</span>
+  </a>
+  <p class="forja__aviso"><span class="forja__selo">Modelo demonstrativo</span><span class="forja__texto"> · Dentalis é uma clínica fictícia criada pelo Estúdio Forja</span></p>
+  <nav class="forja__nav" aria-label="Atalhos do modelo">
+    <a class="forja__link" href="#inicio" data-rolar>Início <span class="so-desk">do modelo</span></a>
+    <a class="forja__link forja__link--wa" data-forja="whatsapp" href="https://wa.me/5545991164764" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg>
+      <span>WhatsApp <span class="so-desk">do Estúdio</span></span>
+    </a>
+  </nav>
+</div>
+
+<!-- Cabeçalho -->
+<header class="topo" id="topo">
+  <a class="logo" href="#inicio" data-rolar aria-label="Dentalis, voltar ao início">
+    <svg class="marca" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M12.6 8.6c-2.7 0-4.3 2-4.3 4.7 0 2.2.8 3.7 1.4 5.7.7 2.4.9 6.4 2.6 6.4 1.5 0 1.7-4.3 3.7-4.3s2.2 4.3 3.7 4.3c1.7 0 1.9-4 2.6-6.4.6-2 1.4-3.5 1.4-5.7 0-2.7-1.6-4.7-4.3-4.7-1.6 0-2.2.9-3.4.9s-1.8-.9-3.4-.9z"/></svg>
+    <span class="logo__nome">Dentalis</span>
+  </a>
+  <nav class="menu" aria-label="Seções">
+    <a href="#tratamentos" data-rolar>Tratamentos</a>
+    <a href="#atendimento" data-rolar>Atendimento</a>
+    <a href="#estrutura" data-rolar>Estrutura</a>
+    <a href="#duvidas" data-rolar>Dúvidas</a>
+  </nav>
+  <button class="btn btn--coral btn--pequeno topo__cta" type="button" data-demo="agendamento">Agendar avaliação</button>
+  <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-celular">
+    <span class="menu-botao__linhas" aria-hidden="true"></span><span class="sr">Abrir menu</span>
+  </button>
+</header>
+<div class="menu-celular" id="menu-celular" hidden>
+  <nav aria-label="Seções">
+    <a href="#tratamentos" data-rolar>Tratamentos</a>
+    <a href="#atendimento" data-rolar>Atendimento</a>
+    <a href="#estrutura" data-rolar>Estrutura</a>
+    <a href="#duvidas" data-rolar>Dúvidas</a>
+  </nav>
+  <button class="btn btn--coral" type="button" data-demo="agendamento">Agendar avaliação</button>
+</div>
+
+<main id="conteudo">
+
+  <!-- 1. Abertura (imagem 1) -->
+  <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+    <div class="hero__texto">
+      <span class="rotulo"><i class="ponto" aria-hidden="true"></i>Clínica odontológica</span>
+      <h1 class="hero__titulo" id="hero-titulo">
+        <span class="linha"><span class="palavra">Sorria</span></span>
+        <span class="linha"><em class="palavra">sem pressa.</em></span>
+      </h1>
+      <p class="hero__apoio">Odontologia que começa pela escuta: avaliação completa, plano explicado por escrito e nenhum procedimento sem a sua aprovação.</p>
+      <div class="hero__acoes">
+        <button class="btn btn--coral" type="button" data-demo="agendamento">Agendar avaliação</button>
+        <a class="link-seta" href="#experiencia" data-rolar>Conhecer a clínica
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+      </div>
+    </div>
+    <figure class="hero__portal">
+      <img src="img/imagem-1-1600.webp" srcset="img/imagem-1-900.webp 900w, img/imagem-1-1600.webp 1600w"
+           sizes="(min-width: 900px) 44vw, 100vw" width="1600" height="900"
+           alt="Recepção da Dentalis: balcão de mármore branco com base azul-petróleo, orquídeas e poltronas claras junto a janelas amplas."
+           fetchpriority="high">
+    </figure>
+    <ul class="hero__lista" aria-label="Tratamentos">
+      <li>Prevenção</li><li>Clareamento</li><li>Ortodontia</li><li>Implantes</li><li>Lentes e facetas</li><li>Odontopediatria</li>
+    </ul>
+  </section>
+
+  <!-- 2. Sequência guiada pela rolagem (video 1) -->
+  <section class="filme" id="experiencia" aria-label="Um passeio pela clínica">
+    <div class="filme__fixo">
+      <div class="filme__palco">
+        <canvas id="filme-canvas" aria-hidden="true"></canvas>
+        <img class="filme__estatico" src="frames/desktop/q_127.webp" alt="Recepção da Dentalis vista da entrada." loading="lazy">
+      </div>
+      <div class="filme__sombra filme__sombra--esq" aria-hidden="true"></div>
+      <div class="filme__sombra filme__sombra--dir" aria-hidden="true"></div>
+      <div class="filme__veu" aria-hidden="true"></div>
+
+      <div class="letreiro" aria-hidden="true">
+        <span class="letreiro__texto">Sorria sem pressa · Cuidado que se sente · Sorria sem pressa · Cuidado que se sente ·</span>
+      </div>
+
+      <div class="cena cena--esq" data-entra="6" data-sai="34" data-animacao="desliza-esq" data-sombra="esq">
+        <span class="rotulo">001 / Chegada</span>
+        <h2 class="cena__titulo">Você entra e respira.</h2>
+        <p class="cena__texto">Luz natural, silêncio e uma recepção sem pressa. A experiência começa antes da cadeira.</p>
+      </div>
+
+      <div class="cena cena--dir" data-entra="38" data-sai="62" data-animacao="recorte" data-sombra="dir">
+        <span class="rotulo">002 / Acolhimento</span>
+        <h2 class="cena__titulo">Tempo para ouvir você.</h2>
+        <p class="cena__texto">Consultas marcadas com folga, para explicar cada etapa e responder às suas dúvidas com calma.</p>
+      </div>
+
+      <div class="cena cena--numeros" data-entra="68" data-sai="100" data-fixa="true" data-animacao="sobe" data-sombra="veu">
+        <span class="rotulo">003 / Nosso compromisso</span>
+        <h2 class="cena__titulo">Clareza antes de qualquer procedimento.</h2>
+        <div class="numeros">
+          <div class="numero">
+            <span class="numero__valor"><span class="contador" data-valor="3">3</span></span>
+            <span class="numero__legenda">etapas na primeira consulta: escuta, exame e plano</span>
+          </div>
+          <div class="numero">
+            <span class="numero__valor"><span class="contador" data-valor="1">1</span></span>
+            <span class="numero__legenda">plano por escrito, com prazos e valores</span>
+          </div>
+          <div class="numero">
+            <span class="numero__valor"><span class="contador" data-valor="100">100</span><small>%</small></span>
+            <span class="numero__legenda">das etapas explicadas antes de começar</span>
+          </div>
+        </div>
+        <button class="btn btn--coral" type="button" data-demo="agendamento">Agendar avaliação</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Benefícios (foto nova) -->
+  <section class="beneficios" id="beneficios" aria-labelledby="benef-titulo">
+    <figure class="beneficios__foto">
+      <img src="img/foto-nova-1600.webp" srcset="img/foto-nova-900.webp 900w, img/foto-nova-1600.webp 1600w"
+           sizes="100vw" width="1600" height="900" loading="lazy"
+           alt="Homem de barba grisalha e camisa azul-marinho sorrindo em um consultório claro.">
+    </figure>
+    <div class="beneficios__texto revela" data-animacao="sobe">
+      <span class="rotulo">004 / Por que cuidar</span>
+      <h2 class="titulo" id="benef-titulo">Um sorriso em dia muda o <em>dia inteiro.</em></h2>
+      <p class="corpo">Comer com conforto, conversar sem se esconder, sorrir numa foto sem pensar duas vezes. Pequenas liberdades que voltam quando a saúde da boca está cuidada.</p>
+      <ul class="beneficios__lista">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Conforto para mastigar e falar</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Mais segurança para sorrir</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Problemas tratados cedo, com tratamentos mais simples</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Tratamentos -->
+  <section class="tratamentos" id="tratamentos" aria-labelledby="trat-titulo">
+    <div class="tratamentos__topo revela" data-animacao="desliza-esq">
+      <span class="rotulo">005 / Tratamentos</span>
+      <h2 class="titulo" id="trat-titulo">Do check-up ao <em>sorriso novo.</em></h2>
+      <p class="corpo">Cuidado para cada fase da vida, sempre a partir de uma avaliação.</p>
+    </div>
+    <ol class="tratamentos__lista revela" data-animacao="sobe-lista">
+      <li class="trat"><span class="trat__n">01</span><h3>Avaliação e prevenção</h3><p>Exame completo, limpeza e orientação para manter a saúde da boca entre as consultas.</p></li>
+      <li class="trat"><span class="trat__n">02</span><h3>Clareamento dental</h3><p>Feito com acompanhamento profissional, depois de avaliar se o seu caso é indicado.</p></li>
+      <li class="trat"><span class="trat__n">03</span><h3>Ortodontia e alinhadores</h3><p>Aparelho fixo ou alinhadores transparentes, com a opção escolhida junto com você.</p></li>
+      <li class="trat"><span class="trat__n">04</span><h3>Implantes dentários</h3><p>Reposição de dentes perdidos, com planejamento feito a partir de exames de imagem.</p></li>
+      <li class="trat"><span class="trat__n">05</span><h3>Lentes e facetas</h3><p>Ajustes de forma e cor do sorriso, planejados para combinar com o seu rosto.</p></li>
+      <li class="trat"><span class="trat__n">06</span><h3>Odontopediatria</h3><p>Atendimento para crianças, com tempo e linguagem adequados a cada idade.</p></li>
+    </ol>
+    <div class="tratamentos__acao">
+      <p>Não sabe por onde começar? A avaliação mostra o caminho.</p>
+      <button class="btn btn--coral" type="button" data-demo="agendamento">Agendar avaliação</button>
+    </div>
+  </section>
+
+  <!-- 5. Atendimento (video 2, a partir da imagem 3) -->
+  <section class="atendimento" id="atendimento" aria-labelledby="atend-titulo">
+    <figure class="atendimento__video">
+      <video id="video-atendimento" muted playsinline preload="none"
+             poster="video/video-2-inicio.webp" data-fim="video/video-2-fim.webp"
+             aria-label="Dentista e paciente conversando e sorrindo no consultório.">
+        <source src="video/video-2.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <div class="atendimento__texto revela" data-animacao="desliza-dir">
+      <span class="rotulo">006 / Atendimento</span>
+      <h2 class="titulo" id="atend-titulo">Antes de tratar, <em>a gente escuta.</em></h2>
+      <ol class="passos">
+        <li><span class="passos__n">01</span><div><h3>Conversa</h3><p>Você conta o que sente, o que incomoda e o que espera do tratamento.</p></div></li>
+        <li><span class="passos__n">02</span><div><h3>Exame</h3><p>Avaliação clínica completa e, quando necessário, exames de imagem.</p></div></li>
+        <li><span class="passos__n">03</span><div><h3>Plano</h3><p>As opções explicadas, com etapas, prazos e valores por escrito. A decisão é sua.</p></div></li>
+      </ol>
+      <button class="btn btn--contorno" type="button" data-demo="contato">Tirar uma dúvida</button>
+    </div>
+  </section>
+
+  <!-- 6. Estrutura (imagem 4) -->
+  <section class="estrutura" id="estrutura" aria-labelledby="estr-titulo">
+    <div class="estrutura__texto revela" data-animacao="recorte">
+      <span class="rotulo rotulo--claro">007 / Estrutura</span>
+      <h2 class="titulo" id="estr-titulo">Um espaço pensado para você <em>ficar à vontade.</em></h2>
+      <ul class="estrutura__lista">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span><strong>Luz natural</strong> e ambientes amplos</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span><strong>Radiografia digital</strong> vista com você, na tela</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Esterilização</strong> e biossegurança em cada atendimento</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Hora marcada</strong>, sem fila de espera</span></li>
+      </ul>
+    </div>
+    <figure class="estrutura__foto">
+      <img src="img/imagem-4-1340.webp" srcset="img/imagem-4-800.webp 800w, img/imagem-4-1340.webp 1340w"
+           sizes="(min-width: 900px) 55vw, 100vw" width="1340" height="900" loading="lazy"
+           alt="Consultório da Dentalis: cadeira odontológica branca e azul-petróleo, armários brancos e janelas para árvores.">
+    </figure>
+  </section>
+
+  <!-- 7. Dúvidas -->
+  <section class="duvidas" id="duvidas" aria-labelledby="duv-titulo">
+    <div class="duvidas__topo revela" data-animacao="escala">
+      <span class="rotulo">008 / Dúvidas</span>
+      <h2 class="titulo" id="duv-titulo">Perguntas que todo mundo <em>faz.</em></h2>
+    </div>
+    <div class="duvidas__lista">
+      <details name="duvidas">
+        <summary>A primeira consulta já inclui tratamento?</summary>
+        <p>Não. A primeira consulta é uma avaliação: conversa, exame e plano. Nenhum procedimento é feito sem a sua aprovação.</p>
+      </details>
+      <details name="duvidas">
+        <summary>Quanto custa um tratamento?</summary>
+        <p>Depende do que o seu caso precisa. Depois da avaliação, você recebe o plano com os valores por escrito, para decidir com calma.</p>
+      </details>
+      <details name="duvidas">
+        <summary>Tenho medo de dentista. E agora?</summary>
+        <p>Conte isso logo no começo. A consulta pode seguir no seu ritmo, com pausas e com cada etapa explicada antes de acontecer.</p>
+      </details>
+      <details name="duvidas">
+        <summary>Vocês atendem convênio?</summary>
+        <p>As formas de pagamento e os convênios aceitos são informados no momento do agendamento.</p>
+      </details>
+      <details name="duvidas">
+        <summary>Atendem crianças?</summary>
+        <p>Sim. A odontopediatria cuida das crianças com tempo e linguagem adequados a cada idade.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 8. Conversão final (video 3 no computador, imagem 2 no celular) -->
+  <section class="final" id="agendar" aria-labelledby="final-titulo">
+    <div class="final__midia">
+      <video class="final__video" id="video-final" muted playsinline preload="none"
+             poster="video/video-3-inicio.webp" data-fim="video/video-3-fim.webp" aria-hidden="true">
+        <source src="video/video-3.mp4" type="video/mp4">
+      </video>
+      <img class="final__foto" src="img/imagem-2-600.webp" srcset="img/imagem-2-600.webp 600w, img/imagem-2-900.webp 900w"
+           sizes="100vw" width="900" height="1124" loading="lazy"
+           alt="Mulher sorrindo com a mão no queixo, em um consultório claro.">
+    </div>
+    <div class="final__texto revela" data-animacao="gira">
+      <span class="rotulo">009 / Sua avaliação</span>
+      <h2 class="titulo titulo--grande" id="final-titulo">O próximo sorriso <em>pode ser o seu.</em></h2>
+      <p class="corpo">Agende uma avaliação e saia com um plano claro, feito para você.</p>
+      <div class="final__acoes">
+        <button class="btn btn--coral" type="button" data-demo="agendamento">Agendar avaliação</button>
+        <button class="btn btn--contorno" type="button" data-demo="contato">Falar com a clínica</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="rodape__grade">
+    <div class="rodape__marca">
+      <a class="logo logo--claro" href="#inicio" data-rolar aria-label="Dentalis, voltar ao início">
+        <svg class="marca" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M12.6 8.6c-2.7 0-4.3 2-4.3 4.7 0 2.2.8 3.7 1.4 5.7.7 2.4.9 6.4 2.6 6.4 1.5 0 1.7-4.3 3.7-4.3s2.2 4.3 3.7 4.3c1.7 0 1.9-4 2.6-6.4.6-2 1.4-3.5 1.4-5.7 0-2.7-1.6-4.7-4.3-4.7-1.6 0-2.2.9-3.4.9s-1.8-.9-3.4-.9z"/></svg>
+        <span class="logo__nome">Dentalis</span>
+      </a>
+      <p>Odontologia sem pressa. Clínica fictícia, criada como modelo demonstrativo de site.</p>
+    </div>
+    <nav class="rodape__col" aria-label="Seções">
+      <h3>Navegue</h3>
+      <a href="#tratamentos" data-rolar>Tratamentos</a>
+      <a href="#atendimento" data-rolar>Atendimento</a>
+      <a href="#estrutura" data-rolar>Estrutura</a>
+      <a href="#duvidas" data-rolar>Dúvidas</a>
+    </nav>
+    <div class="rodape__col">
+      <h3>Atendimento</h3>
+      <button class="rodape__link" type="button" data-demo="agendamento">Agendar avaliação</button>
+      <button class="rodape__link" type="button" data-demo="contato">Falar com a clínica</button>
+      <p class="rodape__nota">Responsável técnico e CRO: dados da clínica real entram aqui.</p>
+    </div>
+    <div class="rodape__col">
+      <h3>Informações</h3>
+      <a href="privacidade.html">Política de privacidade</a>
+      <a href="termos.html">Termos de uso</a>
+    </div>
+  </div>
+  <div class="rodape__base">
+    <p>© <span data-ano>2026</span> Dentalis (marca fictícia). Textos e imagens ilustrativos, gerados para demonstração.</p>
+    <p class="rodape__forja">Um projeto desenvolvido por <a data-forja="site" href="https://estudioforja.com.br">Estúdio Forja</a>.</p>
+  </div>
+</footer>
+
+<!-- Barra fixa do celular -->
+<div class="barra-celular" id="barra-celular" aria-hidden="true">
+  <button class="btn btn--coral" type="button" data-demo="agendamento" tabindex="-1">Agendar avaliação</button>
+</div>
+
+<!-- Janela do modo demonstrativo -->
+<dialog class="demo" id="demo" aria-labelledby="demo-titulo">
+  <button class="demo__fechar" type="button" data-fechar aria-label="Fechar">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <span class="rotulo"><i class="ponto" aria-hidden="true"></i>Modelo demonstrativo</span>
+  <h2 class="demo__titulo" id="demo-titulo">Esse clique viraria um agendamento.</h2>
+  <p class="demo__texto" id="demo-texto">A Dentalis é uma clínica fictícia. Num site real, este botão levaria o paciente direto para a agenda ou para o WhatsApp da clínica.</p>
+  <p class="demo__texto demo__texto--forja">Este site foi criado pelo <strong>Estúdio Forja</strong>. Quer um assim para a sua clínica ou o seu negócio?</p>
+  <div class="demo__acoes">
+    <a class="btn btn--coral" data-forja="whatsapp" href="https://wa.me/5545991164764" target="_blank" rel="noopener">Quero um site assim</a>
+    <a class="btn btn--contorno" data-forja="site" href="https://estudioforja.com.br">Ver outros projetos</a>
+    <button class="demo__continuar" type="button" data-fechar>Continuar explorando a Dentalis</button>
+  </div>
+</dialog>
+
+<script src="js/config.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

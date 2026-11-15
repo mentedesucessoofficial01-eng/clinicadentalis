@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidade · Dentalis (modelo demonstrativo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="forja">
+    <a class="forja__link" href="https://estudioforja.com.br"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span>Estúdio Forja</span></a>
+    <nav class="forja__nav"><a class="forja__link" href="index.html">Início <span class="so-desk">do modelo</span></a></nav>
+  </div>
+  <main class="legal">
+    <a class="logo" href="index.html" aria-label="Dentalis, voltar ao início">
+      <svg class="marca" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M12.6 8.6c-2.7 0-4.3 2-4.3 4.7 0 2.2.8 3.7 1.4 5.7.7 2.4.9 6.4 2.6 6.4 1.5 0 1.7-4.3 3.7-4.3s2.2 4.3 3.7 4.3c1.7 0 1.9-4 2.6-6.4.6-2 1.4-3.5 1.4-5.7 0-2.7-1.6-4.7-4.3-4.7-1.6 0-2.2.9-3.4.9s-1.8-.9-3.4-.9z"/></svg>
+      <span class="logo__nome">Dentalis</span>
+    </a>
+    <h1>Política de privacidade</h1>
+    <p class="atualizado">Atualizada em 15 de novembro de 2026.</p>
+
+    <h2>Sobre este site</h2>
+    <p>A Dentalis é uma clínica odontológica fictícia. Este site é um modelo demonstrativo criado pelo Estúdio Forja para mostrar como pode ser o site de uma clínica. Ele não agenda consultas, não presta atendimento e não vende serviços.</p>
+
+    <h2>Quem é o responsável</h2>
+    <p>O responsável por este site é o Estúdio Forja. Para qualquer assunto sobre privacidade, fale com o Estúdio pelo <a data-forja="whatsapp" href="https://wa.me/5545991164764">WhatsApp</a>.</p>
+
+    <h2>Que dados coletamos</h2>
+    <p>Nenhum. O site não tem formulários que enviam dados, não pede cadastro, não usa cookies e não usa ferramentas de análise ou de publicidade. As fontes e as bibliotecas ficam no próprio site, sem chamar serviços de terceiros ao abrir a página.</p>
+
+    <h2>Links para fora do site</h2>
+    <ul>
+      <li>Os botões "Quero um site assim" e "WhatsApp do Estúdio" abrem o WhatsApp, um serviço da Meta. A partir daí vale a política de privacidade do WhatsApp, e você só envia uma mensagem se quiser.</li>
+      <li>Os links "Estúdio Forja" e "Ver outros projetos" levam ao site do Estúdio Forja, que tem a sua própria política.</li>
+    </ul>
+
+    <h2>Seus direitos</h2>
+    <p>Como este site não guarda dados pessoais, não há informações suas para consultar, corrigir ou apagar. Se você conversou com o Estúdio pelo WhatsApp, pode pedir a qualquer momento, pelo mesmo canal, que a conversa e os seus dados sejam apagados, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+
+    <h2>Mudanças nesta política</h2>
+    <p>Se o site passar a coletar algum dado, esta página será atualizada antes, com a nova data no topo.</p>
+
+    <a class="btn btn--contorno legal__voltar" href="index.html">Voltar para a Dentalis</a>
+  </main>
+  <script src="js/config.js"></script>
+  <script>
+    (function () {
+      var e = window.DENTALIS && window.DENTALIS.estudio; if (!e) return;
+      document.querySelectorAll('[data-forja="whatsapp"]').forEach(function (a) { a.href = 'https://wa.me/' + e.whatsapp + '?text=' + encodeURIComponent(e.mensagem); });
+      document.querySelectorAll('.forja a[href^="https://estudio"]').forEach(function (a) { a.href = e.site; });
+    })();
+  </script>
+</body>
+</html>

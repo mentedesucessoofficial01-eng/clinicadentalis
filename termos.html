@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Termos de uso · Dentalis (modelo demonstrativo)</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="forja">
+    <a class="forja__link" href="https://estudioforja.com.br"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span>Estúdio Forja</span></a>
+    <nav class="forja__nav"><a class="forja__link" href="index.html">Início <span class="so-desk">do modelo</span></a></nav>
+  </div>
+  <main class="legal">
+    <a class="logo" href="index.html" aria-label="Dentalis, voltar ao início">
+      <svg class="marca" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M12.6 8.6c-2.7 0-4.3 2-4.3 4.7 0 2.2.8 3.7 1.4 5.7.7 2.4.9 6.4 2.6 6.4 1.5 0 1.7-4.3 3.7-4.3s2.2 4.3 3.7 4.3c1.7 0 1.9-4 2.6-6.4.6-2 1.4-3.5 1.4-5.7 0-2.7-1.6-4.7-4.3-4.7-1.6 0-2.2.9-3.4.9s-1.8-.9-3.4-.9z"/></svg>
+      <span class="logo__nome">Dentalis</span>
+    </a>
+    <h1>Termos de uso</h1>
+    <p class="atualizado">Atualizados em 15 de novembro de 2026.</p>
+
+    <h2>1. Caráter demonstrativo</h2>
+    <p>A Dentalis não existe. Nome, marca, textos, ambientes e pessoas foram criados para demonstração. Nenhum botão do site agenda consultas ou contrata serviços: eles abrem um aviso explicando que se trata de um modelo.</p>
+
+    <h2>2. Imagens e vídeos</h2>
+    <p>As fotos e os vídeos foram gerados com inteligência artificial e são ilustrativos. As pessoas retratadas não são pacientes nem profissionais reais.</p>
+
+    <h2>3. Conteúdo sobre saúde</h2>
+    <p>Os textos sobre tratamentos são genéricos e servem só para mostrar como um site de clínica pode se comunicar. Eles não são orientação odontológica. Para cuidar da sua saúde bucal, procure um cirurgião-dentista inscrito no Conselho Regional de Odontologia.</p>
+
+    <h2>4. Direitos autorais</h2>
+    <p>O projeto visual, os textos e o código deste site pertencem ao Estúdio Forja. Não é permitido copiar, revender ou publicar o site, no todo ou em parte, sem autorização por escrito. Clínicas e empresas interessadas podem contratar um projeto próprio com o Estúdio.</p>
+
+    <h2>5. Links externos</h2>
+    <p>O site leva ao WhatsApp e ao site do Estúdio Forja. Esses serviços têm regras próprias, que valem a partir do momento em que você os acessa.</p>
+
+    <h2>6. Contato</h2>
+    <p>Dúvidas sobre estes termos: fale com o Estúdio Forja pelo <a data-forja="whatsapp" href="https://wa.me/5545991164764">WhatsApp</a>.</p>
+
+    <a class="btn btn--contorno legal__voltar" href="index.html">Voltar para a Dentalis</a>
+  </main>
+  <script src="js/config.js"></script>
+  <script>
+    (function () {
+      var e = window.DENTALIS && window.DENTALIS.estudio; if (!e) return;
+      document.querySelectorAll('[data-forja="whatsapp"]').forEach(function (a) { a.href = 'https://wa.me/' + e.whatsapp + '?text=' + encodeURIComponent(e.mensagem); });
+      document.querySelectorAll('.forja a[href^="https://estudio"]').forEach(function (a) { a.href = e.site; });
+    })();
+  </script>
+</body>
+</html>
