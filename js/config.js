@@ -18,7 +18,7 @@ window.DENTALIS = {
 
   estudio: {
     nome: "Estúdio Forja",
-    site: "https://estudioforja.com.br",   // endereço definitivo: a confirmar
+    site: "https://estudioforja.com.br/#portfolio",   // endereço definitivo: a confirmar
     whatsapp: "5545991164764",              // atendente virtual do Estúdio
     mensagem: "Olá! Vi o site da Dentalis e quero um site assim para o meu negócio."
   },
